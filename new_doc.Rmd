@@ -100,7 +100,12 @@ head(pulse_data, 5)
 ```
 
 
-# write csv
+
+```{r}
+litters_df$Group
+```
+
+
 ```{r}
 litters_df = read_csv(file="data_import_examples/FAS_litters.csv")
 
