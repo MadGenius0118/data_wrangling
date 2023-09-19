@@ -1,0 +1,38 @@
+---
+title: "simple_doc"
+author: "Fangyi Chen"
+date: "2023-09-19"
+output: github_document
+---
+
+Let's import the 'FAS_litters.csv'
+
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r}
+litters_df = read_csv(file="data_import_examples/FAS_litters.csv")
+
+litters_df = janitor::clean_names(litters_df)
+```
+
+Import dataset using absolute path
+```{r}
+litters_df = read_csv(file="/Users/madgeniuschen/Desktop/data_science/data_wrangling/data_import_examples/FAS_litters.csv")
+litters_df = janitor::clean_names(litters_df)
+```
+
+**Learning Assessment**: Make sure you are able to load the FAS_pups.csv dataset. Use both absolute and relative paths. Quit R Studio and move the directory containing your project, data, and R Markdown document. Repeat the previous data import process; do both absolute and relative paths still work?
+
+
+```{r}
+pups_df = read_csv(file="data_import_examples/FAS_pups.csv")
+
+pups_df = read_csv(file="/Users/madgeniuschen/Desktop/data_science/data_wrangling/data_import_examples/FAS_pups.csv")
+```
+
+
+
